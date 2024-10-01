@@ -24,3 +24,9 @@ for iteration_loop in range (720):
     # Set the position
     turtle_.left(1)
     turtle_.fd(1)
+    
+    # Create another loop
+    for inner_loop in range (2):
+        turtle_.left(10)
+        turtle_.circle(200)
+
