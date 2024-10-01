@@ -18,6 +18,7 @@ speed(0)
 
 # Hide the cursor
 hideturtle()
+tracer(5)
 
 # Set the background color
 bgcolor("black")
