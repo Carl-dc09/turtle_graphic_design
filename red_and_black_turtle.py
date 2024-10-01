@@ -8,3 +8,8 @@ bgcolor("black")
 
 # Set the drawing speed
 tracer(500)
+
+# Set a function to draw
+def draw():
+    # Set a value for the color transitions
+    hue = 0
