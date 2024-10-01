@@ -11,6 +11,8 @@ screen_color = turtle.Screen().bgcolor("black")
 # Set the drawing speed
 turtle_.speed(500)
 tracer(5)
+# Hide the cursor
+hideturtle()
 
 # Set a value for hue
 hue_increment = 70
@@ -31,3 +33,4 @@ for iteration_loop in range (720):
         turtle_.left(10)
         turtle_.circle(200)
 
+done()
