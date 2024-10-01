@@ -42,3 +42,8 @@ def draw():
             fd(iteration)
             circle(small_arc, 299, steps=2)
         end_fill()
+
+# Start drawing
+draw()
+
+done()
