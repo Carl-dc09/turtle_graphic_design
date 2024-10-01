@@ -13,3 +13,8 @@ tracer(500)
 def draw():
     # Set a value for the color transitions
     hue = 0
+    # Set the loop
+    for iteration in range(100):
+        # Convert into RGB color
+        colors_ = colorsys.hsv_to_rgb(hue, 1, 1)
+    
