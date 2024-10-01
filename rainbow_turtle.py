@@ -21,8 +21,10 @@ def draw_pattern(hue_color):
          for inner_loop in range(18):
                # Convert the hue_color from the HSV color space to RGB format
                turtles_color = colorsys.hsv_to_rgb(hue_color, 1, 1)
-        
+
+               # Set the turtle's color
                color(turtles_color)
+               # Set the drawing function
                hue_color += 0.005
                right(90)
                circle(150 - inner_loop * 6, 90)
@@ -31,12 +33,15 @@ def draw_pattern(hue_color):
                right(180)
          circle(40, 24)
 
-for row in range(2):
+# Set a multiple turtle's in a rows and columns
+for rows in range(2):
      for columns in range(3):
           penup()
-          goto(-500 + columns * 500, 300 - row * 500)
+          goto(-500 + columns * 500, 300 - rows * 500)
           pendown()
 
           draw_pattern(hue_color)
           hue_color += 0.1 
+
+# Finishes the drawing process          
 done()
