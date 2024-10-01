@@ -6,18 +6,23 @@ import colorsys
 # Set the drawing speed
 speed(0)
 tracer(5)
+# Hide the cursor
 hideturtle()
 # Set the background color
 bgcolor("black")
-# Set the hue to determine the color
+# Set the hue for color
 hue_color = 0
 
+# To draw a specific pattern
 def draw_pattern(hue_color):
+    # To draw the outer loop
     for outer_loop in range(16):
+         # To draw the inner loop
          for inner_loop in range(18):
-               c = colorsys.hsv_to_rgb(hue_color, 1, 1)
+               # Convert the hue_color from the HSV color space to RGB format
+               turtles_color = colorsys.hsv_to_rgb(hue_color, 1, 1)
         
-               color(c)
+               color(turtles_color)
                hue_color += 0.005
                right(90)
                circle(150 - inner_loop * 6, 90)
@@ -35,4 +40,3 @@ for row in range(2):
           draw_pattern(hue_color)
           hue_color += 0.1 
 done()
-
