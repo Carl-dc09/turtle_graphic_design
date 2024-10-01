@@ -32,8 +32,13 @@ def draw():
         # Position the turtle
         rt(98)
         fd(290)
-        fd(i)
+        fd(iteration)
         lt(29)
         # Draw a circle
         circle(iteration, 12)
-
+        
+        # Create another loop
+        for small_arc in range(129):
+            fd(iteration)
+            circle(small_arc, 299, steps=2)
+        end_fill()
