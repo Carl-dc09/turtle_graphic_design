@@ -17,4 +17,13 @@ def draw():
     for iteration in range(100):
         # Convert into RGB color
         colors_ = colorsys.hsv_to_rgb(hue, 1, 1)
-    
+        
+        hue += 0.5
+        up()
+        # Position the turtle
+        goto(0, 0)
+        down()
+        # Set the outline color of the shapes
+        color("black")
+        # Set the fill color to the RGB color
+        fillcolor (c)
