@@ -12,3 +12,6 @@ def heart_b(single_parameter):
            math.cos(2*single_parameter)-2*\
            math.cos(3*single_parameter)-\
            math.cos(4*single_parameter)
+
+# Set the drawing speed
+speed(0)
