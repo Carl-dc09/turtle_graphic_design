@@ -44,4 +44,4 @@ for rows in range(2):
           hue_color += 0.1 
 
 # Finishes the drawing process          
-done()
+hideturtle()
