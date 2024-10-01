@@ -16,6 +16,9 @@ def heart_b(single_parameter):
 # Set the drawing speed
 speed(0)
 
+# Hide the cursor
+hideturtle()
+
 # Set the background color
 bgcolor("black")
 
@@ -25,3 +28,4 @@ for t_angle in range(6000):
     for color_iteration in range(5):
         color("#f73487")
     goto(0, 0)
+
