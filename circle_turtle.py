@@ -10,6 +10,7 @@ turtle_ = turtle.Turtle()
 screen_color = turtle.Screen().bgcolor("black")
 # Set the drawing speed
 turtle_.speed(500)
+tracer(5)
 
 # Set a value for hue
 hue_increment = 70
