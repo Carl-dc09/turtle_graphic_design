@@ -18,3 +18,10 @@ speed(0)
 
 # Set the background color
 bgcolor("black")
+
+# Calculate the loop
+for t_angle in range(6000):
+    goto(heart_a(t_angle)*20, heart_b(t_angle)*20)
+    for color_iteration in range(5):
+        color("#f73487")
+    goto(0, 0)
