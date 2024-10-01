@@ -26,10 +26,14 @@ def draw():
         # Set the outline color of the shapes
         color("black")
         # Set the fill color to the RGB color
-        fillcolor (c)
+        fillcolor(colors_)
         # Start the filling of the shape
         begin_fill()
         # Position the turtle
-        rt (98)
+        rt(98)
+        fd(290)
+        fd(i)
+        lt(29)
         # Draw a circle
-        circle(i, 12)
+        circle(iteration, 12)
+
