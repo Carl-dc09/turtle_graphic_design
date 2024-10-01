@@ -30,3 +30,4 @@ for t_angle in range(6000):
         color("#f73487")
     goto(0, 0)
 
+done()
