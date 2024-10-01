@@ -17,12 +17,4 @@ def heart_b(single_parameter):
 speed(0)
 
 # Set the background color
-bgcolor("white")
-
-for i in range(6000):
-    goto(heart_a(i)*20, heart_b(i)*20)
-    for j in range(5):
-        color("#f73487")
-    goto(0, 0)
-
-done()
+bgcolor("black")
