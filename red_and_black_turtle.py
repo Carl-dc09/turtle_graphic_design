@@ -27,3 +27,9 @@ def draw():
         color("black")
         # Set the fill color to the RGB color
         fillcolor (c)
+        # Start the filling of the shape
+        begin_fill()
+        # Position the turtle
+        rt (98)
+        # Draw a circle
+        circle(i, 12)
