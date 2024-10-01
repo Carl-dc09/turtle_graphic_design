@@ -5,6 +5,7 @@ import colorsys
 
 # Set the drawing speed
 speed(0)
+tracer(10)
 hideturtle()
 # Set the background color
 bgcolor("black")
