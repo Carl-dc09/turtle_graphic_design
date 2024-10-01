@@ -10,7 +10,6 @@ hideturtle()
 bgcolor("black")
 # Set the hue to determine the color
 hue_color = 0
-tracer(0)
 
 def draw_pattern(hue_color):
     for outer_loop in range(16):
@@ -34,6 +33,5 @@ for row in range(2):
 
           draw_pattern(hue_color)
           hue_color += 0.1 
-
 done()
 
