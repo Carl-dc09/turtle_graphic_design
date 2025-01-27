@@ -2,7 +2,6 @@
 from turtle import *
 # Import color from colorsys
 import colorsys
-
 import time
 
 # Set the drawing speed
@@ -20,7 +19,6 @@ def start_countdown(seconds):
      penup()
      goto(0, 0)
      color("white")
-     write("Starting in...", align="center", font=("Arial", 26))
 
      for i in range(seconds, 0, -1):
           clear()
@@ -56,8 +54,6 @@ def draw_pattern(hue_color):
          circle(40, 24)
 
 def start_drawing():
-     start_countdown(5)
-
      global hue_color
 
      # Set a multiple turtle's in a rows and columns
@@ -70,7 +66,25 @@ def start_drawing():
                draw_pattern(hue_color)
                hue_color += 0.1
 
-start_drawing() 
+def start_again():
+     while True:
+          start_countdown(5)
+          start_drawing()
+
+          ask_restart = textinput("Restart?", "Would you like to play it again? (Yes/No): ")
+          if ask_restart is None or ask_restart.lower() != "yes":
+               clear()
+               penup()
+               goto(0, 0)
+               color("white")
+               write("Thank you for appreciating my code!", align="center", font=("Arial", 26))\
+               
+               write("See you again!", align="center", font=("Arial", 26))
+               update()
+               time.sleep(2)
+               break
+
+start_again() 
 
 # Finishes the drawing process          
 done()
