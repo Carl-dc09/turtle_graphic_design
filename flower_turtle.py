@@ -22,6 +22,7 @@ def start_countdown(seconds):
 
      for i in range(seconds, 0, -1):
           clear()
+          bgcolor(colorsys.hsv_to_rgb(i / seconds, 1, 1))
           write(f"Starting in {i}...", align="center", font=("Arial", 26))
           update()
           time.sleep(1)
@@ -55,6 +56,7 @@ def draw_pattern(hue_color):
 
 def start_drawing():
      global hue_color
+     bgcolor("black")
 
      # Set a multiple turtle's in a rows and columns
      for rows in range(2):
@@ -62,28 +64,65 @@ def start_drawing():
                penup()
                goto(-500 + columns * 500, 300 - rows * 500)
                pendown()
-
                draw_pattern(hue_color)
                hue_color += 0.1
 
+     penup()
+     goto(0, 0)
+     clear()
+
+     penup()
+     goto(0, 200)
+     color("white")
+     write("I Love You!", align="center", font=("Arial", 72, "bold"))
+     update()
+     time.sleep(2)
+     
+     clear()
+     update()
+
+     heart_effect()
+
+def heart_effect():
+     penup()
+     goto(0, -100)
+     pendown()
+     color("pink")
+     begin_fill()
+
+     left(50)
+     forward(133)
+     circle(50, 200)
+     right(140)
+     circle(50, 200)
+     forward(133)
+
+     end_fill()
+
+     penup()
+     goto(0, 0)
+     update()
+
 def start_again():
+     global hue_color
      while True:
           start_countdown(5)
           start_drawing()
 
-          ask_restart = textinput("Restart?", "Would you like to play it again? (Yes/No): ")
+          ask_restart = textinput("Restart?", "Would you like to play my confession again? (Yes/No): ")
           if ask_restart is None or ask_restart.lower() != "yes":
                clear()
                penup()
                goto(0, 0)
                color("white")
-               write("Thank you for appreciating my code!", align="center", font=("Arial", 26))
+               write("I hope I made you smile :).", align="center", font=("Arial", 26))
                update()
                time.sleep(2)
 
                for i in range(5, 0, -1):
                     clear()
 
+                    bgcolor(colorsys.hsv_to_rgb(i / 5, 1, 1))
                     write(f"Closing in {i}...", align="center", font=("Arial", 26))
                     update()
                     time.sleep(1)
