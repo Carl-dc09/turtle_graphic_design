@@ -77,14 +77,20 @@ def start_again():
                penup()
                goto(0, 0)
                color("white")
-               write("Thank you for appreciating my code!", align="center", font=("Arial", 26))\
-               
-               write("See you again!", align="center", font=("Arial", 26))
+               write("Thank you for appreciating my code!", align="center", font=("Arial", 26))
                update()
                time.sleep(2)
+
+               for i in range(5, 0, -1):
+                    clear()
+
+                    write(f"Closing in {i}...", align="center", font=("Arial", 26))
+                    update()
+                    time.sleep(1)
+               clear()
                break
+
+     exit()
 
 start_again() 
 
-# Finishes the drawing process          
-done()
